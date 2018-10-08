@@ -19,7 +19,6 @@
           class="button--grey">GitHub</a>
       </div>
     </div>
-    <p :class="$style.root">im red </p>
   </section>
 </template>
 
@@ -34,9 +33,6 @@ export default {
 </script>
 
 <style module>
-.root {
-  background-color: red;
-}
 .container {
   min-height: 100vh;
   display: flex;
