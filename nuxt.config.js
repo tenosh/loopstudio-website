@@ -2,7 +2,6 @@ const pkg = require('./package')
 
 module.exports = {
   mode: 'universal',
-
   /*
   ** Headers of the page
   */
@@ -11,9 +10,9 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { hid: 'description', name: 'description', content: pkg.description },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
   /*
@@ -36,7 +35,7 @@ module.exports = {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
   ],
   /*
   ** Axios module configuration
@@ -59,16 +58,24 @@ module.exports = {
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
-          exclude: /(node_modules)/
+          exclude: /(node_modules)/,
         })
       }
       // Enable Module CSS on .vue files
-      const vueLoader = config.module.rules.find(
-        ({ loader }) => loader === 'vue-loader'
-      )
-      vueLoader.options.cssModules = {
-        localIdentName: '[name]__[local]'
-      }
-    }
-  }
+      // const vueLoader = config.module.rules.find(
+      //   ({ loader }) => loader === 'vue-loader'
+      // )
+      // vueLoader.options.cssModules = {
+      //   localIdentName: '[name]__[local]'
+      // }
+    },
+    loaders: {
+      cssModules: {
+        localIdentName: '[local]_[hash:base64:5]',
+      },
+      sass: {
+        indentedSyntax: true,
+      },
+    },
+  },
 }
