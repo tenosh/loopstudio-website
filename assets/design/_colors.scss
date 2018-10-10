@@ -2,10 +2,14 @@
 $color-body-bg: #f9f7f5;
 $color-text: #444;
 $color-heading-text: #35495e;
+$black: #000;
 
 // LINKS
 $color-link-text: #39a275;
 $color-link-text-active: $color-text;
+
+$link-hover-color: darken($color-link-text, 15%) !default;
+$link-hover-decoration: underline !default;
 
 // INPUTS
 $color-input-border: lighten($color-heading-text, 50%);
