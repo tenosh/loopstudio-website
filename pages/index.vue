@@ -1,24 +1,14 @@
 <template>
   <section :class="$style.container">
-    <div>
-      <logo/>
+    <header>
       <h1 :class="$style.title">
         loopstudio
       </h1>
       <h2 :class="$style.subtitle">
         Main website for loopstudio
+        <p>{{ WelcomeText }}</p>
       </h2>
-      <div :class="$style.links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
-    </div>
+    </header>
   </section>
 </template>
 
@@ -29,11 +19,17 @@ export default {
   components: {
     Logo,
   },
+  data() {
+    return {
+      WelcomeText: 'lorem ipsum',
+    }
+  },
 }
 </script>
 
 <style lang="scss" module>
 @import '~/assets/design/index.scss';
+
 .container {
   display: flex;
   align-items: center;
@@ -43,9 +39,7 @@ export default {
 
   .title {
     display: block;
-    font-family: 'Quicksand', 'Source Sans Pro', -apple-system,
-      BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
-      sans-serif;
+    font-family: $system-default-font-family;
     font-size: 100px;
     font-weight: 300;
     color: $color-link-text;
@@ -63,5 +57,7 @@ export default {
   .links {
     padding-top: 15px;
   }
+}
+@include respond-above(sm) {
 }
 </style>
