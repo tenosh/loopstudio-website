@@ -5,12 +5,9 @@
 </template>
 
 <style lang="scss" module>
-@import '~/assets/design/reboot.scss';
-
 .appContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: red;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 </style>

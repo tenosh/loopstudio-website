@@ -1,20 +1,24 @@
+// COLOR PALLET
+$color-mountain-meadow: #31bd8e;
+$color-cerulean: #2ab9d7;
+$color-prune: #7b1e22;
+$color-charcoal: #2c4251;
+$color-silver: #c1c1c1;
+
 // CONTENT
-$color-body-bg: #f9f7f5;
-$color-text: #444;
-$color-heading-text: #35495e;
+$color-body-bg: lighten($color-silver, 30%);
+$color-text: $color-charcoal;
+$color-heading: $color-mountain-meadow;
+
+// COMMON
 $black: #000;
+$gray: #444;
+$white: #fff;
 
 // LINKS
-$color-link-text: #39a275;
-$color-link-text-active: $color-text;
-
-$link-hover-color: darken($color-link-text, 15%) !default;
-$link-hover-decoration: underline !default;
+$color-link-text: lighten($color-mountain-meadow, 30%);
+$color-link-text-active: $color-mountain-meadow;
+$colorlink-hover: lighten($color-mountain-meadow, 60%) !default;
 
 // INPUTS
-$color-input-border: lighten($color-heading-text, 50%);
-
-// BUTTONS
-$color-button-bg: $color-link-text;
-$color-button-disabled-bg: darken(desaturate($color-button-bg, 20%), 10%);
-$color-button-text: white;
+$color-input-border: lighten($color-mountain-meadow, 50%);

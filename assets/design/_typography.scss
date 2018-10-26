@@ -327,7 +327,7 @@ $typography-type-scale-contrast: (
 }
 
 $typography-base-font-size: 1rem;
-$typography-base-line-height: $typography-base-font-size * 1.25;
+$typography-base-line-height: $typography-base-font-size * 1.1;
 
 $typography-line-heights: (
   -1: $typography-base-line-height,
@@ -387,30 +387,20 @@ $typography-line-heights-contrast: (
 
 %typography-xxlarge {
   @include typography-got-rhythm(3);
-
-  @extend %font-heading;
 }
 
 %typography-xlarge {
   @include typography-got-rhythm(2);
-
-  @extend %font-heading;
 }
 
 %typography-large {
   @include typography-got-rhythm(1);
-
-  @extend %font-heading;
 }
 
 %typography-medium {
   @include typography-got-rhythm(0);
-
-  @extend %font-content;
 }
 
 %typography-small {
   @include typography-got-rhythm(-1);
-
-  @extend %font-content;
 }

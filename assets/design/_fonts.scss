@@ -5,21 +5,25 @@ $system-default-font-family: 'Quicksand', 'Source Sans Pro', -apple-system,
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
   'Liberation Mono', 'Courier New', monospace !default;
 
-$heading-font-family: $system-default-font-family;
+$font-loopstudio-slab: 'Roboto Slab', serif;
+
+$font-loopstudio: 'Roboto', sans-serif;
+
+$font-loopstudio-montserrat: 'Montserrat', sans-serif;
+
+$heading-font-family: $font-loopstudio-slab;
 $heading-font-weight: 600;
 
-$content-font-family: $system-default-font-family;
+$content-font-family: $font-loopstudio-montserrat;
 $content-font-weight: 400;
 
-$line-height-base: 1.5 !default;
-
-$font-size-base: 1rem !default;
+$line-height-base: 1 !default;
 
 %font-heading {
   font-family: $heading-font-family;
   font-weight: $heading-font-weight;
   line-height: $line-height-base;
-  color: $color-heading-text;
+  color: $color-heading;
 }
 
 %font-content {
